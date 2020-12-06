@@ -1,0 +1,54 @@
+[
+    {
+      "id": "KW",
+      "name": "Kaney West",
+      "description": "Vestibulum diam ante, porttitor a odio eged, rhoncus neque. Aenean eu velit libero.",
+      "time": "1 month ago",
+      "sector": "in Entertainment",
+      "img": "kanye.png",
+      "votes": {
+        "upVote": 20,
+        "downVote": 80,
+        "totalVotes": 100
+      }
+    },
+    {
+      "id": "MZ",
+      "name": "Mark Zuckerberg",
+      "description": "Vestibulum diam ante, porttitor a odio eged, rhoncus neque. Aenean eu velit libero.",
+      "time": "1 month ago",
+      "sector": "in Business",
+      "img": "mark.png",
+      "votes": {
+        "upVote": 60,
+        "downVote": 40,
+        "totalVotes": 100
+      }
+    },
+    {
+      "id": "CF",
+      "name": "Cristina Fernández de Kirchner",
+      "description": "Vestibulum diam ante, porttitor a odio eged, rhoncus neque. Aenean eu velit libero.",
+      "time": "1 month ago",
+      "sector": "in Politics",
+      "img": "cristina.png",
+      "votes": {
+        "upVote": 48,
+        "downVote": 52,
+        "totalVotes": 100
+      }
+    },
+    {
+      "id": "MY",
+      "name": "Malala Yousafzai",
+      "description": "Vestibulum diam ante, porttitor a odio eged, rhoncus neque. Aenean eu velit libero.",
+      "time": "1 month ago",
+      "sector": "in Entertainment",
+      "img": "malala.png",
+      "votes": {
+        "upVote": 60,
+        "downVote": 40,
+        "totalVotes": 100
+      }
+    }
+]

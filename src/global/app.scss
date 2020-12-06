@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+/**
+  *  VARIABLES
+  **/
+
+// Background
+$headerPNG: 'https://res.cloudinary.com/doq5xnp2z/image/upload/v1607135049/global/pope.png';
+$thumbUp: 'https://res.cloudinary.com/doq5xnp2z/image/upload/v1607137203/global/thumbUp_svg.svg';
+$thumbDown: 'https://res.cloudinary.com/doq5xnp2z/image/upload/v1607137203/global/thumbDown_svg.svg';
+$twIcon: 'https://res.cloudinary.com/doq5xnp2z/image/upload/v1607236597/global/tw_icon.png';
+$fbIcon: 'https://res.cloudinary.com/doq5xnp2z/image/upload/v1607236597/global/fb_icon.png';
+
+// Fonts
+$globalFont: 'Lato', sans-serif;
+
+// Colors
+$orange: #FFAD1D;
+$orangeRGBA: 	255,	173,	29;
+$navy-blue: #1BBBB3;
+$white: #FFF;
+$brown: #333;
+$lightBrown: #777;
+$black: #000;
+$lightGray: #CCC;
+
+
+/**
+  *  FREQUENTLY USED CLASSES
+  **/
+
+.button {
+    padding: 12px 20px;
+    color: $brown;
+    outline: 0;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 24px;
+
+    &--no-border {
+        border: none;
+    }
+
+    &--border {
+        border: 1px solid #222;
+    }
+}
+
+.font {
+    &--small-size { font-size: 8px; }
+    &--medium-size { font-size: 12px; }
+    &--xmedium-size { font-size: 20px; }
+    &--large-size { font-size: 28px; }
+    &--xlarge-size { font-size: 60px; }
+}

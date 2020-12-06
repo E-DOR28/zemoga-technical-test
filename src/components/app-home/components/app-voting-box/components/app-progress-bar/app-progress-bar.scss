@@ -1,0 +1,41 @@
+app-progress-bar {
+
+  .app-progress-bar {
+    display: flex;
+    width: auto;
+    height: 100%;
+    overflow: visible;
+    align-items: center;
+    font-size: 30px;
+
+    &__wrapper {
+      justify-content: space-between;
+
+    }
+  
+    &__left-bar {
+      background-color: rgba($navy-blue, 0.5);
+    }
+  
+    &__right-bar {
+      background-color: rgba($orange, 0.5);
+      justify-content: flex-end;
+      text-align: end;
+    }
+
+    label {
+      display: table;
+      width: 200px;
+    }
+
+
+    .icon {
+      width: 25px;
+      height: 25px;
+      padding: 5px;
+      margin: 0 5px;
+    }
+    
+  }
+
+}

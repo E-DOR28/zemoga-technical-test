@@ -1,0 +1,107 @@
+.menu {
+    top: -2rem;
+    width: auto;
+    z-index: 200;
+
+    &--extended {
+        list-style-type: none;
+        padding: 2rem 0 0;
+        margin: 0;
+    }
+
+    &__extended-items {
+        list-style-type: none;
+        display: flex;
+        height: 30px;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        font-size: 0.8em;
+
+        li.menu__item {
+            display: inline-block;
+            padding: 0 20px;
+
+            a {
+                display: block;
+                color: $white;
+                text-align: center;
+                text-decoration: none;
+                margin: 5px 0 0 0;
+            }
+            
+            a:hover {
+                color: $lightGray;
+            }
+
+            .lens {
+                width: 18px;
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+
+    &--collapsable {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin:0;
+        padding: 30px 0;
+        background: $black;
+    }
+
+    &__collpasable-items {
+        position: relative;
+        height: auto;
+    }
+
+    &__collapsable-item {
+        list-style-type: none;
+        width: auto;
+        text-align: right;
+        padding: 10px;
+
+        a {
+            display: block;
+            color: $white;
+            text-decoration: underline;
+            margin: 0;
+        }
+        
+        .a:hover {
+            background-color: $white;
+            color: $brown;
+        }
+
+        .lens {
+            width: 18px;
+            filter: brightness(0) invert(1);
+        }
+
+        button {
+            background-color: transparent;
+            padding: 10px 20px;
+            color: $white;
+            border: 1px solid $white;
+            outline: 0;
+            cursor: pointer;
+        }
+    }
+}
+
+/* On screens between 621px and 992px */
+@media (min-width: 621px) and (max-width: 992px) {
+    .menu--collapsable {
+        display: block;
+    };
+}
+
+/* On screens that are 620px or less */
+@media screen and (max-width: 620px) {
+
+    .menu--collapsable {
+        display: block;
+    };
+}

@@ -1,0 +1,201 @@
+@mixin thumbUp() {
+    background-image: url($thumbUp);
+    background-color: $navy-blue;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@mixin thumbDown() {
+    background-image: url($thumbDown);
+    background-color: $orange;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+app-voting-box {
+    margin: 20px 0;
+
+    .box {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        width: 490px;
+        height: 548px;
+        border: 1px solid $white;
+        color: $white;
+    
+        &__background {
+            background-size: 100% 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: inherit;
+            height: inherit;
+            z-index: 99;
+        }
+    
+        &__content {
+            display: flex;
+            flex-direction: column;
+            width: inherit;
+            z-index: 100;
+            background: linear-gradient(0deg, 
+            rgba(32,32,32,0.90) 0%, 
+            rgba(28,28,28,0.58) 50%, 
+            rgba(78,78,78,0) 100%);
+
+            .content {
+                width: auto;
+                height: auto;
+                padding-right: 40px;
+                margin: 0;
+                z-index: 100;
+
+                &__header {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-end;
+                    height: 100px;
+            
+                    .icon {
+                        width: 18px;
+                        height: 18px;
+                        margin: 0 10px 26px 0;
+                        padding: 5px;
+            
+                        &--thumbUp { @include thumbUp; }
+                        &--thumbDown { @include thumbDown; }
+                    }
+            
+                    .title {
+                        margin: 0 0 3px 0;
+
+                        &--main {
+                            display: block;
+                            line-height: 45px;
+                            font-size: 45px;
+                            text-align: left;
+                        }
+
+                        &--footer {
+                            display: block;
+                            width: 100%;
+                            text-align: left;
+                            font-size: 11px;
+                        }
+                    }
+
+                }
+                
+            
+                &__description {
+                    width: inherit;
+                    height: 40px;
+                    font-size: 14px;
+                    padding-left: 34px;
+                }
+            
+                &__footer {
+                    width: inherit;
+                    font-size: 12px;
+            
+                    .action-buttons-wrapper {
+                        display: flex;
+                        align-items: center;
+                        padding: 0 0 20px 34px;
+
+                        &__button {
+                            margin: 0 14px 0 0;
+                        }
+
+                        &__button-radio {
+                            display: none;
+
+                            &:checked + label {
+                                border: 1px solid $white;
+                            }
+                        }
+
+                        &__button-label {
+                            display: block;
+                            width: auto;
+                            height: 28px;
+                            cursor: pointer;
+
+                            .icon {
+                                width: 18px;
+                                height: 18px;
+                                padding: 5px;
+
+                                &--thumbUp { @include thumbUp; }
+                                &--thumbDown { @include thumbDown; }
+                            }
+                        }
+
+
+                        &__button-button {
+                            background-color: transparent;
+                            padding: 10px 20px;
+                            color: $white;
+                            border: 1px solid $white;
+                            outline: 0;
+                            cursor: pointer;
+                        }
+
+                    }
+
+                }
+
+                div {
+                    margin: 0 0 15px 0;
+                }
+
+            }
+
+            .footer {
+                width: auto;
+                height: 60px;
+            }
+
+        }
+    
+    }
+
+}
+
+/* On screens smaller than 992px */
+@media  screen and (max-width: 992px) {
+    app-voting-box {
+        .box {
+            width: 400px;
+            height: 428px;
+        }
+    }
+}
+
+/* On screens smaller than 992px */
+@media  screen and (max-width: 660px) {
+    app-voting-box {
+        .box {
+            width: 80vw;
+            height: 80vw;
+
+            .content {
+                &__header {
+            
+                    .title {
+
+                        &--main {
+                            line-height: 34px;
+                            font-size: 34px;
+                        }
+                    }
+
+                }
+
+            }
+        }
+    }
+}

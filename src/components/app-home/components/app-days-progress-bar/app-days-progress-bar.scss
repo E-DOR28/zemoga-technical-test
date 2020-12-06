@@ -1,0 +1,64 @@
+@import "../../../../global/app.scss";
+
+app-days-progress-bar {
+
+    .progress-bar {
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-grow: column wrap;
+    }
+    
+    .bar {
+        display: flex;
+        height: 100%;
+    
+        &--left {
+            width: 35%;
+            background-color: rgba($lightBrown, 0.7);
+            justify-content: flex-end;
+        }
+    
+        &--right {
+            width: 65%;
+            background-color: rgba($lightGray, 0.7);
+        }
+    }
+
+    .shape {
+        position: absolute;
+        top: 32%;
+        left: 35%;
+
+        &--triangle {
+            width: 0;
+            height: 0;
+            background: transparent;
+            border-top: 10px solid transparent;
+            border-left: 20px solid rgba($lightBrown, 0.7);;
+            border-bottom: 10px solid transparent;
+        }
+    }
+
+    .text {
+        align-self: center;
+        margin: 0 25px;
+
+        &__bar-label {
+            color: $lightGray;
+        }
+    
+        &__bar-value-label {
+            color: $brown;
+        }
+    }
+
+}
+
+/* On screens smaller than 992px */
+@media  screen and (max-width: 992px) {
+    .font {
+        &--xmedium-size { font-size: 18px; }
+        &--large-size { font-size: 20px; }
+    }
+}

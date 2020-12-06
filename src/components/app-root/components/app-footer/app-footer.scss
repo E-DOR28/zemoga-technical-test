@@ -1,0 +1,121 @@
+footer {
+    background-color: $white;
+    max-width: 1280px;
+    bottom: 0;
+    left:0;
+    right:0;
+    padding: 0;
+    margin-left:auto;
+    margin-right:auto;
+    z-index: 998;
+  
+    .footer {
+        max-width: 1025px;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+        margin-left:auto;
+        margin-right:auto;
+
+
+        &__navigation {
+            width: 80%;
+        }
+    
+        &__social-networks {
+            width: 20%;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        &--wrapper {
+            border-top: 1px dotted $brown;
+        }
+    }
+
+    .icon {
+        width: 18px;
+        height: 18px;
+        padding: 5px;
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        margin: 0 0 0 10px;
+
+        &--fb-icon {
+            background-image: url($fbIcon);
+        }
+
+        &--tw-icon {
+            background-image: url($twIcon);
+        }
+    }
+
+
+    .menu {
+        top: -2rem;
+        width: auto;
+        z-index: 200;
+    
+        &--extended {
+            list-style-type: none;
+            padding: 2rem 0 0;
+            margin: 0;
+        }
+    
+        &__extended-items {
+            list-style-type: none;
+            display: flex;
+            height: 30px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-size: 0.8em;
+    
+            li.menu__item {
+                display: inline-block;
+                padding: 0 15px 0 0;
+    
+                a {
+                    display: block;
+                    color: $white;
+                    text-align: center;
+                    text-decoration: none;
+                    margin: 5px 0 0 0;
+                }
+                
+                a:hover {
+                    color: $lightGray;
+                }
+    
+                .lens {
+                    width: 18px;
+                    filter: brightness(0) invert(1);
+                }
+            }
+        }
+    }
+  
+}
+
+/* On screens smaller than 992px */
+@media screen and (max-width: 992px) {
+    .footer {
+        .menu {             
+            &__extended-items {   
+                .menu__item {
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}
+
+/* On screens that are 620px or less */
+@media screen and (max-width: 620px) {
+
+    .follow-us {
+        display: none;
+    }
+}
